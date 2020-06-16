@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	
 	  @Override protected void configure(HttpSecurity http) throws Exception { 
-		  
+		  //Codigo comentado que funciona en el modo de SpringWeb App
 		  /*
 		  http 
 			  .authorizeRequests() 
@@ -45,7 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			  .formLogin().loginPage("/login").permitAll() 
 			  .and().logout().permitAll();
 		  */
-		  
+		  //Codigo para proteger los servicios REST
 		  http
 		  .csrf()
 		  .disable()
